@@ -36,7 +36,7 @@
         </nav>
     </header>
     
-    <div class="bg-flex" style="width: 100%; height: 25%;"
+    <div class="bg-flex"
         data-vide-bg="./video/chess.mp4" data-vide-options="loop: true, muted: true, playbackRate: 3, position: 0% 0%">
         
         <div class="wordmark"><div class="whitebox"></div></div>
@@ -44,22 +44,22 @@
     <div class="board-flex">
         <div class="container">
             <div class="grid grid-rows-2 grid-flow-col gap-0 flex justify-center">
-                <div class="square black"><div></div></div>
-                <div class="square white"></div>
-                <div class="square white"></div>
-                <div class="square black"></div>
-                <div class="square black"></div>
-                <div class="square white"></div>
-                <div class="square white"></div>
-                <div class="square black"></div>
-                <div class="square black"></div>
-                <div class="square white"></div>
-                <div class="square white"></div>
-                <div class="square black"></div>
-                <div class="square black"></div>
-                <div class="square white"></div>
-                <div class="square white"></div>
-                <div class="square black"></div>
+                <div class="square black"><div class="piece"></div></div>
+                <div class="square white"><div class="piece"></div></div>
+                <div class="square white"><div class="piece"></div></div>
+                <div class="square black"><div class="piece"></div></div>
+                <div class="square black"><div class="piece"></div></div>
+                <div class="square white"><div class="piece"></div></div>
+                <div class="square white"><div class="piece"></div></div>
+                <div class="square black"><div class="piece"></div></div>
+                <div class="square black"><div class="piece"></div></div>
+                <div class="square white"><div class="piece"></div></div>
+                <div class="square white"><div class="piece"></div></div>
+                <div class="square black"><div class="piece"></div></div>
+                <div class="square black"><div class="piece"></div></div>
+                <div class="square white"><div class="piece"></div></div>
+                <div class="square white"><div class="piece"></div></div>
+                <div class="square black"><div class="piece"></div></div>
             </div>
             <div class="grid grid-rows-2 grid-flow-col gap-0 flex justify-center">
                 <div class="square black"></div>
@@ -98,22 +98,22 @@
                 <div class="square black"></div>
             </div>
             <div class="grid grid-rows-2 grid-flow-col gap-0 flex justify-center">
-                <div class="square black"></div>
-                <div class="square white"></div>
-                <div class="square white"></div>
-                <div class="square black"></div>
-                <div class="square black"></div>
-                <div class="square white"></div>
-                <div class="square white"></div>
-                <div class="square black"></div>
-                <div class="square black"></div>
-                <div class="square white"></div>
-                <div class="square white"></div>
-                <div class="square black"></div>
-                <div class="square black"></div>
-                <div class="square white"></div>
-                <div class="square white"></div>
-                <div class="square black"></div>
+                <div class="square black"><div class="piece2"></div></div>
+                <div class="square white"><div class="piece2"></div></div>
+                <div class="square white"><div class="piece2"></div></div>
+                <div class="square black"><div class="piece2"></div></div>
+                <div class="square black"><div class="piece2"></div></div>
+                <div class="square white"><div class="piece2"></div></div>
+                <div class="square white"><div class="piece2"></div></div>
+                <div class="square black"><div class="piece2"></div></div>
+                <div class="square black"><div class="piece2"></div></div>
+                <div class="square white"><div class="piece2"></div></div>
+                <div class="square white"><div class="piece2"></div></div>
+                <div class="square black"><div class="piece2"></div></div>
+                <div class="square black"><div class="piece2"></div></div>
+                <div class="square white"><div class="piece2"></div></div>
+                <div class="square white"><div class="piece2"></div></div>
+                <div class="square black"><div class="piece2"></div></div>
             </div>
         </div>
     </div>
@@ -142,11 +142,14 @@
     </script>
     <!-- gsap import -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <!-- gsap import Draggable -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"></script>
     <!-- gsap options -->
     <script>
-        Draggable.create("#", {
+        // Draggable const in the gsap Draggable.min.js imported above, is referenced to create a function that the DOM targets elements with the class, .piece:
+        Draggable.create(".piece", {
             type: "x,y",
-            bounds: "#container",
+            bounds: ".container",
             inertia: true,
             snap: {
                 x: function (value) {
@@ -155,7 +158,21 @@
                 y: function (value) {
                 return Math.round(value / valueY) * valueY;
                 }
-            }
+            },
+        });
+        // Draggable const in the gsap Draggable.min.js imported above, is referenced to create a function that the DOM targets elements with the class, .piece2:
+        Draggable.create(".piece2", {
+            type: "x,y",
+            bounds: ".container",
+            inertia: true,
+            snap: {
+                x: function (value) {
+                return Math.round(value / valueX) * valueX;
+                },
+                y: function (value) {
+                return Math.round(value / valueY) * valueY;
+                }
+            },
         });
     </script>
 </body>
