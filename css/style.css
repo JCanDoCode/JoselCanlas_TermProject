@@ -67,23 +67,35 @@ footer {
     background-position: center;
 }
 
-/* home flex ------------------------------------------------------------------------- */
-.home-flex {
-    width: 90%;
-    height: 1300px;
-    margin: 0 5% 0 5%;
+/* home ------------------------------------------------------------------------- */
+.bg-flex {
+    width: 100%;
+    height: 25%;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 .wordmark {
     width: 100%;
-    height: 15%;
+    height: 50%;
     margin-bottom: 15px;
     background: url(../images/pieces_wordmark.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.whitebox {
+    display: block;
+    content: "";
+    width: 60%;
+    height: 90%;
+    border-radius: 30%;
+    background-color: #fff;
+    z-index: -1;
+    filter: blur(1.25rem);
 }
 .paragraph-image {
     margin-bottom: 5px;
@@ -118,6 +130,8 @@ footer {
 .row:nth-child(even) .square:nth-child(odd) {
     background-color: beige;
 }
+
+
 /* shop ----------------------------------------------------------------------------- */
 .shop-flex {
     width: 100%;
@@ -133,12 +147,21 @@ footer {
     margin-bottom: 30px;
     display: flex;
     align-items: end;
+    z-index: 0;
 }
 .product-description {
     width: 50%;
     margin-bottom: 6%;
+}
+.product-description::before {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    content: "";
     background: rgba(0, 0, 0, 0.404);
-    filter: drop-shadow(0.75rem 0.75rem 0.75rem #000);
+    filter: blur(1rem);
+    z-index: -1;
 }
 .product:nth-of-type(1) {
     background: url(../images/classic.jpg);
@@ -275,65 +298,65 @@ p {
         background-position: center;
     }
     
-    /* home flex ------------------------------------------------------------------------- */
-    .home-flex {
-        width: 90%;
-        height: 1000px;
-        margin: 0 5% 0 5%;
+    /* home ------------------------------------------------------------------------- */
+    .bg-flex {
+        width: 100%;
+        height: 35%;
         display: flex;
-        flex-direction: column;
+        justify-content: center;
         align-items: center;
     }
     .wordmark {
         width: 100%;
-        height: 20%;
+        height: 50%;
         margin-bottom: 15px;
         background: url(../images/pieces_wordmark.png);
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
-    }
-    .paragraph-image {
-        width: 100%;
-        height: 20%;
         display: flex;
-        flex-direction: row;
+        justify-content: center;
+        align-items: center;
     }
-    .home-image1 {
-        height: 100%;
-        width: 20%;
-        display: inline-block;
-        background: url(../images/1.jpg);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+    .whitebox {
+        display: block;
+        content: "";
+        width: 60%;
+        height: 90%;
+        border-radius: 30%;
+        background-color: #fff;
+        z-index: -1;
+        filter: blur(1.25rem);
     }
-    .home-image2 {
-        height: 100%;
-        width: 20%;
-        display: inline-block;
-        background: url(../images/2.jpg);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+
+    /* board ----------------------------------------------------------------------------- */
+    .board-flex {
+        width: 100%;
+        height: 900px;
+        margin-top: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-    .home-image3 {
-        height: 100%;
-        width: 20%;
-        display: inline-block;
-        background: url(../images/3.jpg);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+    .square {
+        width: 5vh;
+        height: 5vh;
+        border: solid 1px #000;
     }
-    .home-image4 {
-        height: 100%;
-        width: 20%;
-        display: inline-block;
-        background: url(../images/4.jpg);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+    .black {
+        background-color: #A06535;
+    }
+    .white {
+        background-color: beige;
+    }
+    .row:nth-child(odd) .square:nth-child(odd),
+    .row:nth-child(even) .square:nth-child(even) {
+        background-color: #A06535;
+    }
+
+    .row:nth-child(odd) .square:nth-child(even),
+    .row:nth-child(even) .square:nth-child(odd) {
+        background-color: beige;
     }
 
     /* shop ----------------------------------------------------------------------------- */
@@ -468,66 +491,35 @@ p {
         background-position: center;
     }
     
-    /* home flex ------------------------------------------------------------------------- */
-    .home-flex {
-        width: 75%;
-        height: 1100px;
-        margin: 0 5% 0 5%;
-        padding: 0 7.5% 0 7.5%;
+    /* home ------------------------------------------------------------------------- */
+    .bg-flex {
+        width: 100%;
+        height: 50%;
         display: flex;
-        flex-direction: column;
+        justify-content: center;
         align-items: center;
     }
     .wordmark {
         width: 100%;
-        height: 20%;
+        height: 50%;
         margin-bottom: 15px;
         background: url(../images/pieces_wordmark.png);
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
-    }
-    .paragraph-image {
-        width: 100%;
-        height: 20%;
         display: flex;
-        flex-direction: row;
+        justify-content: center;
+        align-items: center;
     }
-    .home-image1 {
-        height: 300%;
-        width: 50%;
-        display: inline-block;
-        background: url(../images/1.jpg);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-    .home-image2 {
-        height: 100%;
-        width: 20%;
-        display: none;
-        background: url(../images/2.jpg);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-    .home-image3 {
-        height: 100%;
-        width: 20%;
-        display: none;
-        background: url(../images/3.jpg);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-    .home-image4 {
-        height: 100%;
-        width: 20%;
-        display: none;
-        background: url(../images/4.jpg);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+    .whitebox {
+        display: block;
+        content: "";
+        width: 60%;
+        height: 90%;
+        border-radius: 30%;
+        background-color: #fff;
+        z-index: -1;
+        filter: blur(1.25rem);
     }
 
     /* shop ----------------------------------------------------------------------------- */
