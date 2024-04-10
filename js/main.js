@@ -15,10 +15,14 @@ const toggle_nav = () => {
         ham_menu.style.transform = "translateX(50vw)";
         // changes the active variable to true to recognize that the hamburger menu is active:
         active = true;
-    } else {
-        // changes the active variable to false to s
+    } 
+    // else being if the active == true (the hamburger icon has been clicked once) when the ham icon is clicked again:
+    else {
+        // changes the active variable to false to recognize that the hamburger menu is not active. This way the user can use the 
         active = false;
+        // changes the hamburger-menu transition style to null so the ham_menu revert the change made in the first if statement ham_icon was clicked. It needs to do this so that the new style transition does not effect the nav when switching viewports:
         ham_menu.style.transition = null;
+        // changes the hamburger-menu transform style to null so it can go back to its original place before the ham_icon was clicked. It needs to do this so that the new style transition does not effect the nav when switching viewports:
         ham_menu.style.transform = null;
     }
 };
