@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pieces</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/efd2ff2659.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <svg class="hamburger-icon" width="10%" height="40%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+            <ul class="hamburger-menu">
+                <li class="nav-item"><a href="./index.html">Home</a></li>
+                <li class="nav-item"><a href="./shop.html">Shop</a></li>
+                <li class="nav-item"><a href="./puzzles.html">Puzzles</a></li>
+            </ul>
+            <a class="logo" href="./index.html"></a>
+        </nav>
+    </header>
+    <div style="width: 1000px; height: 500px;"
+        data-vide-bg="./video/chess.mp4" data-vide-options="loop: true, muted: true, position: 0% 0%">
+    </div>
+    <div class="board-flex">
+        <div class="container">
+            <div class="grid grid-rows-2 grid-flow-col gap-0 flex justify-center">
+                    <div class="square black"></div>
+                    <div class="square white"></div>
+                    <div class="square white"></div>
+                    <div class="square black"></div>
+                    <div class="square black"></div>
+                    <div class="square white"></div>
+                    <div class="square white"></div>
+                    <div class="square black"></div>
+                    <div class="square black"></div>
+                    <div class="square white"></div>
+                    <div class="square white"></div>
+                    <div class="square black"></div>
+                    <div class="square black"></div>
+                    <div class="square white"></div>
+                    <div class="square white"></div>
+                    <div class="square black"></div>
+            </div>
+            <div class="grid grid-rows-2 grid-flow-col gap-0 flex justify-center">
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+            </div>
+            <div class="grid grid-rows-2 grid-flow-col gap-0 flex justify-center">
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+            </div>
+            <div class="grid grid-rows-2 grid-flow-col gap-0 flex justify-center">
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        Some descriptive content written by AI
+    </footer>
+    <!-- import main.js that invokes the hamburger menu script within it -->
+    <script src="./js/main.js"></script>
+    <!-- import jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- imports jquery.vide.js in the js folder to run the function under with reference to the jquery.vide.js -->
+    <script src="./js/jquery.vide.js">
+        // Here I am linking the video for the jquery plugin to access the folder and put it into 
+        $('#myBlock').vide('./video/chess.mp4');
+        $('#myBlock').vide('./video/chess.mp4', {
+        // ...options...
+        });
+        $('#myBlock').vide({
+        mp4: "./video/chess.mp4",
+        }, {
+        // ...options...
+        });
+        $('#myBlock').vide('extended path as a string', 'options as a string');
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script>
+
+    </script>
+</body>
+</html>
